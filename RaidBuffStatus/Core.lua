@@ -199,8 +199,6 @@ local blessingsns = {
 	BS[25890], -- Greater Blessing of Light
 	BS[20217], -- Blessing of Kings
 	BS[25898], -- Greater Blessing of Kings
-	BS[27168], -- Blessing of Sanctuary
-	BS[27169], -- Greater Blessing of Sanctuary
 }
 
 local wisdom = {
@@ -641,7 +639,7 @@ SP = {
 	},
 	improvedbattleone = {
 		order = 780,
-		icon = BSI[2048], -- Battle Shout
+		icon = BSI[12318], -- Battle Shout
 		tip = L["Can buff improved Battle Shout level 1"],
 		callalways = false,
 		code = function()
@@ -656,7 +654,7 @@ SP = {
 	},
 	improvedbattletwo = {
 		order = 770,
-		icon = BSI[2048], -- Battle Shout
+		icon = BSI[12857], -- Battle Shout
 		tip = L["Can buff improved Battle Shout level 2"],
 		callalways = false,
 		code = function()
@@ -671,7 +669,7 @@ SP = {
 	},
 	improvedbattlethree = {
 		order = 760,
-		icon = BSI[2048], -- Battle Shout
+		icon = BSI[12858], -- Battle Shout
 		tip = L["Can buff improved Battle Shout level 3"],
 		callalways = false,
 		code = function()
@@ -686,7 +684,7 @@ SP = {
 	},
 	improvedbattlefour = {
 		order = 750,
-		icon = BSI[2048], -- Battle Shout
+		icon = BSI[12860], -- Battle Shout
 		tip = L["Can buff improved Battle Shout level 4"],
 		callalways = false,
 		code = function()
@@ -701,7 +699,7 @@ SP = {
 	},
 	improvedbattlefive = {
 		order = 740,
-		icon = BSI[2048], -- Battle Shout
+		icon = BSI[12861], -- Battle Shout
 		tip = L["Can buff improved Battle Shout level 5"],
 		callalways = false,
 		code = function()
@@ -731,23 +729,6 @@ SP = {
 			end
 		end,
 	},
-	blessingofsanctuary = {
-		order = 820,
-		icon = BSI[27168], -- Blessing of Sanctuary,
-		tip = L["Can buff Blessing of Sanctuary"],
-		callalways = true,
-		code = function()
-			raid.SanctuaryTalent = {}
-			for name,_ in pairs(raid.classes.PALADIN) do
-				if raid.classes.PALADIN[name].talents then
-					if raid.classes.PALADIN[name].talents.tree[2].talent[14] > 0 then
-						table.insert(raid.SanctuaryTalent, name)
-						raid.classes.PALADIN[name].talents.specialisations.blessingofsanctuary = true
-					end
-				end
-			end
-		end,
-	},
 	auramastery = {
 		order = 815,
 		icon = "Interface\\Icons\\Spell_Holy_AuraMastery",
@@ -758,21 +739,6 @@ SP = {
 				if raid.classes.PALADIN[name].talents then
 					if raid.classes.PALADIN[name].talents.tree[1].talent[6] > 0 then
 						raid.classes.PALADIN[name].talents.specialisations.auramastery = true
-					end
-				end
-			end
-		end,
-	},
-	earthshield = {
-		order = 810,
-		icon = BSI[32594], -- Earth Shield
-		tip = L["Can buff Earth Shield"],
-		callalways = true,
-		code = function()
-			for name,_ in pairs(raid.classes.SHAMAN) do
-				if raid.classes.SHAMAN[name].talents then
-					if raid.classes.SHAMAN[name].talents.tree[3].talent[20] > 0 then
-						raid.classes.SHAMAN[name].talents.specialisations.earthshield = true
 					end
 				end
 			end
@@ -813,42 +779,6 @@ BF = {
 		end,
 		tip = function(self)								-- tool tip
 			RaidBuffStatus:Tooltip(self, L["PVP is On"], report.pvplist, raid.BuffTimers.pvptimerlist)
-		end,
-		partybuff = nil,
-	},
-	crusader = {
-		order = 990,
-		list = "crusaderlist",
-		check = "checkcrusader",
-		default = true,
-		defaultbuff = false,
-		defaultwarning = true,
-		defaultdash = true,
-		defaultdashcombat = false,
-		defaultboss = true,
-		defaulttrash = true,
-		checkzonedout = false,
-		selfbuff = true,
-		timer = false,
-		chat = BS[32223], -- Crusader Aura
-		main = function(self, name, class, unit, raid, report)
-			if class == "PALADIN" then
-				report.checking.crusader = true
-				if unit.hasbuff[BS[32223]] then -- Crusader Aura
-					table.insert(report.crusaderlist, name)
-				end
-			end
-		end,
-		post = nil,
-		icon = BSI[32223], -- Crusader Aura
-		update = function(self)
-			RaidBuffStatus:DefaultButtonUpdate(self, report.crusaderlist, RaidBuffStatus.db.profile.checkcrusader, report.checking.crusader or false)
-		end,
-		click = function(self, button, down)
-			RaidBuffStatus:ButtonClick(self, button, down, "crusader")
-		end,
-		tip = function(self)
-			RaidBuffStatus:Tooltip(self, L["Paladin has Crusader Aura"], report.crusaderlist)
 		end,
 		partybuff = nil,
 	},
@@ -1335,7 +1265,7 @@ BF = {
 		checkzonedout = false,
 		selfbuff = false,
 		timer = false,
-		chat = BS[26992],  -- Thorns
+		chat = BS[9910],  -- Thorns
 		main = function(self, name, class, unit, raid, report)
 			if raid.ClassNumbers.DRUID < 1 then
 				return
@@ -1345,18 +1275,18 @@ BF = {
 			end
 			if class == "PALADIN" or class == "DRUID" or class == "WARRIOR" then  -- only mele tanks need thorns
 				report.checking.thorns = true
-				if not unit.hasbuff[BS[26992]] then  -- Thorns
+				if not unit.hasbuff[BS[9910]] then  -- Thorns
 					table.insert(report.thornslist, name)
 				end
 			end
 		end,
 		post = nil,
-		icon = BSI[26992],  -- Thorns
+		icon = BSI[9910],  -- Thorns
 		update = function(self)
 			RaidBuffStatus:DefaultButtonUpdate(self, report.thornslist, RaidBuffStatus.db.profile.checkthorns, report.checking.thorns or false)
 		end,
 		click = function(self, button, down)
-			RaidBuffStatus:ButtonClick(self, button, down, "thorns", BS[26992], BS[26992], true)  -- Thorns
+			RaidBuffStatus:ButtonClick(self, button, down, "thorns", BS[9910], BS[9910], true)  -- Thorns
 		end,
 		tip = function(self)
 			RaidBuffStatus:Tooltip(self, L["Tank missing Thorns"], report.thornslist, nil, BF.thorns:buffers())
@@ -1372,86 +1302,6 @@ BF = {
 				table.insert(thedruids, name)
 			end
 			return thedruids
-		end,
-	},
-
-	earthshield = {
-		order = 875,
-		list = "earthshieldlist",
-		check = "checkearthshield",
-		default = true,
-		defaultbuff = true,
-		defaultwarning = false,
-		defaultdash = true,
-		defaultdashcombat = false,
-		defaultboss = true,
-		defaulttrash = false,
-		checkzonedout = false,
-		selfbuff = false,
-		timer = false,
-		chat = BS[32594],  -- Earth Shield
-		pre = function(self, raid, report)
-			report.tanksneedingearthshield = {}
-			report.tanksgotearthshield = {}
-			report.shamanwithearthshield = {}
-		end,
-		main = function(self, name, class, unit, raid, report)
-			if raid.ClassNumbers.SHAMAN < 1 then
-				return
-			end
-			if class == "SHAMAN" then
-				if raid.classes.SHAMAN[name].talents then
-					if raid.classes.SHAMAN[name].talents.specialisations.earthshield then
-						table.insert(report.shamanwithearthshield, name)
-					end
-				end
-			elseif unit.istank then
-				if class == "PALADIN" or class == "DRUID" or class == "WARRIOR" then  -- only mele tanks need earthshield
-					report.checking.earthshield = true
-					if unit.hasbuff[BS[32594]] then  -- Earth Shield
-						table.insert(report.tanksgotearthshield, name)
-					else
-						table.insert(report.tanksneedingearthshield, name)
-					end
-				end
-			end
-		end,
-		post = function(self, raid, report)
-			local numberneeded = #report.tanksneedingearthshield
-			local numberavailable = #report.shamanwithearthshield - #report.tanksgotearthshield
-			if #report.tanksneedingearthshield > 0 and #report.shamanwithearthshield > 0 then
-				report.checking.earthshield = true
-			end
-			if numberneeded > 0 and numberavailable > 0 then
-				report.earthshieldlist = report.tanksneedingearthshield
-			end
-		end,
-		icon = BSI[32594],  -- Earth Shield
-		update = function(self)
-			RaidBuffStatus:DefaultButtonUpdate(self, report.earthshieldlist, RaidBuffStatus.db.profile.checkearthshield, report.checking.earthshield or false)
-		end,
-		click = function(self, button, down)
-			RaidBuffStatus:ButtonClick(self, button, down, "earthshield", BS[32594], BS[32594], true)  -- Earth Shield
-		end,
-		tip = function(self)
-			RaidBuffStatus:Tooltip(self, L["Tank missing Earth Shield"], report.earthshieldlist, nil, BF.earthshield:buffers())
-		end,
-		partybuff = function(reportl, prefix)
-			local theshamans = BF.earthshield:buffers()
-			for name,_ in pairs(theshamans) do
-				RaidBuffStatus:Say(prefix .. "<" .. BF.earthshield.chat .. ">: " .. table.concat(reportl, ", "), name)
-			end
-		end,
-		buffers = function()
-			local theshamans = {}
-			for name,_ in pairs(raid.classes.SHAMAN) do
-				if raid.classes.SHAMAN[name].talents then
-					if raid.classes.SHAMAN[name].talents.specialisations.earthshield then
-						table.insert(theshamans, name)
-					end
-				end
-			end
-			return theshamans
 		end,
 	},
 
@@ -1563,47 +1413,6 @@ BF = {
 		end,
 		tip = function(self)
 			RaidBuffStatus:Tooltip(self, L["Someone has a Soulstone"], report.soulstonelist)
-		end,
-		partybuff = nil,
-	},
-
-	food = {
-		order = 500,
-		list = "foodlist",
-		check = "checkfood",
-		default = true,
-		defaultbuff = true,
-		defaultwarning = false,
-		defaultdash = true,
-		defaultdashcombat = false,
-		defaultboss = true,
-		defaulttrash = true,
-		checkzonedout = false,
-		selfbuff = true,
-		timer = false,
-		chat = BS[35272], -- Well Fed
-		main = function(self, name, class, unit, raid, report)
-			local missingbuff = true
-			for _, v in ipairs(foods) do
-				if unit.hasbuff[v] then
-					missingbuff = false
-					break
-				end
-			end
-			if missingbuff then
-				table.insert(report.foodlist, name)
-			end
-		end,
-		post = nil,
-		icon = "Interface\\Icons\\INV_Misc_Food_74",
-		update = function(self)
-			RaidBuffStatus:DefaultButtonUpdate(self, report.foodlist, RaidBuffStatus.db.profile.checkfood, true)
-		end,
-		click = function(self, button, down)
-			RaidBuffStatus:ButtonClick(self, button, down, "food")
-		end,
-		tip = function(self)
-			RaidBuffStatus:Tooltip(self, L["Not Well Fed"], report.foodlist)
 		end,
 		partybuff = nil,
 	},
@@ -2313,13 +2122,13 @@ BF = {
 		checkzonedout = false,
 		selfbuff = true,
 		timer = false,
-		chat = BS[27066], -- Trueshot Aura
+		chat = BS[20906], -- Trueshot Aura
 		main = function(self, name, class, unit, raid, report)
 			if class == "HUNTER" then
 				if raid.classes.HUNTER[name].talents then
 					if raid.classes.HUNTER[name].talents.tree[2].talent[17] > 0 then
 						report.checking.trueshotaura = true
-						if not unit.hasbuff[BS[27066]] then -- Trueshot Aura
+						if not unit.hasbuff[BS[20906]] then -- Trueshot Aura
 							table.insert(report.trueshotauralist, name)
 						end
 					end
@@ -2327,12 +2136,12 @@ BF = {
 			end
 		end,
 		post = nil,
-		icon = BSI[27066], -- Trueshot Aura
+		icon = BSI[20906], -- Trueshot Aura
 		update = function(self)
 			RaidBuffStatus:DefaultButtonUpdate(self, report.trueshotauralist, RaidBuffStatus.db.profile.checktrueshotaura, report.checking.trueshotaura or false)
 		end,
 		click = function(self, button, down)
-			RaidBuffStatus:ButtonClick(self, button, down, "trueshotaura", BS[27066]) -- Trueshot Aura
+			RaidBuffStatus:ButtonClick(self, button, down, "trueshotaura", BS[20906]) -- Trueshot Aura
 		end,
 		tip = function(self)
 			RaidBuffStatus:Tooltip(self, L["Hunter is missing Trueshot Aura"], report.trueshotauralist)
@@ -2373,43 +2182,6 @@ BF = {
 		end,
 		tip = function(self)
 			RaidBuffStatus:Tooltip(self, L["Priest is missing Inner Fire"], report.innerfirelist)
-		end,
-		partybuff = nil,
-	},
-
-	felarmor = {
-		order = 380,
-		list = "felarmorlist",
-		check = "checkfelarmor",
-		default = true,
-		defaultbuff = true,
-		defaultwarning = false,
-		defaultdash = true,
-		defaultdashcombat = false,
-		defaultboss = true,
-		defaulttrash = true,
-		checkzonedout = false,
-		selfbuff = true,
-		timer = false,
-		chat = BS[28176], -- Fel Armor
-		main = function(self, name, class, unit, raid, report)
-			if class == "WARLOCK" then
-				report.checking.felarmor = true
-				if not unit.hasbuff[BS[28176]] then -- Fel Armor
-					table.insert(report.felarmorlist, name)
-				end
-			end
-		end,
-		post = nil,
-		icon = BSI[28176], -- Fel Armor
-		update = function(self)
-			RaidBuffStatus:DefaultButtonUpdate(self, report.felarmorlist, RaidBuffStatus.db.profile.checkfelarmor, report.checking.felarmor or false)
-		end,
-		click = function(self, button, down)
-			RaidBuffStatus:ButtonClick(self, button, down, "felarmor", BS[28176]) -- Fel Armor
-		end,
-		tip = function(self)
-			RaidBuffStatus:Tooltip(self, L["Warlock is missing Fel Armor"], report.felarmorlist)
 		end,
 		partybuff = nil,
 	},
@@ -2496,43 +2268,6 @@ BF = {
 		end,
 		tip = function(self)
 			RaidBuffStatus:Tooltip(self, L["Druid is missing Omen of Clarity"], report.omenofclaritylist)
-		end,
-		partybuff = nil,
-	},
-
-	shamanshield = {
-		order = 355,
-		list = "shamanshieldlist",
-		check = "checkshamanshield",
-		default = true,
-		defaultbuff = true,
-		defaultwarning = false,
-		defaultdash = true,
-		defaultdashcombat = false,
-		defaultboss = true,
-		defaulttrash = true,
-		checkzonedout = false,
-		selfbuff = true,
-		timer = false,
-		chat = BS[33736], -- Water Shield
-		main = function(self, name, class, unit, raid, report)
-			if class == "SHAMAN" then
-				report.checking.shamanshield = true
-				if not unit.hasbuff[BS[33736]] then -- Water Shield
-					table.insert(report.shamanshieldlist, name)
-				end
-			end
-		end,
-		post = nil,
-		icon = BSI[33736], -- Water Shield
-		update = function(self)
-			RaidBuffStatus:DefaultButtonUpdate(self, report.shamanshieldlist, RaidBuffStatus.db.profile.checkshamanshield, report.checking.shamanshield or false)
-		end,
-		click = function(self, button, down)
-			RaidBuffStatus:ButtonClick(self, button, down, "shamanshield", BS[33736]) -- Water Shield
-		end,
-		tip = function(self)
-			RaidBuffStatus:Tooltip(self, L["Shaman is missing Water Shield"], report.shamanshieldlist)
 		end,
 		partybuff = nil,
 	},
@@ -2681,18 +2416,18 @@ BF = {
 		checkzonedout = false,
 		selfbuff = false,
 		timer = false,
-		chat = BS[33946], -- Amplify Magic
+		chat = BS[10170], -- Amplify Magic
 		pre = nil,
 		main = function(self, name, class, unit, raid, report)
 			if raid.ClassNumbers.MAGE > 0 then
 				report.checking.amplifymagic = true
-				if not unit.hasbuff[BS[33946]] then
+				if not unit.hasbuff[BS[10170]] then
 					table.insert(report.amplifymagiclist, name)
 				end
 			end
 		end,
 		post = nil,
-		icon = BSI[33946], -- Amplify Magic
+		icon = BSI[10170], -- Amplify Magic
 		update = function(self)
 			RaidBuffStatus:DefaultButtonUpdate(self, report.amplifymagiclist, RaidBuffStatus.db.profile.checkamplifymagic, report.checking.amplifymagic or false)
 		end,
