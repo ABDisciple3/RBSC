@@ -3009,8 +3009,8 @@ end
 function RaidBuffStatus:ReadRaid()
 	raid.readid = raid.readid + 1
 	raid.TankList = {}
-	local raidnum = GetNumRaidMembers()
-	local partynum = GetNumPartyMembers()
+	local raidnum = GetNumGroupMembers()
+	local partynum = GetNumGroupMembers()
 --	RaidBuffStatus:Debug("tankList:" .. tankList)
 	if raidnum < 2 then
 		if partynum < 1 then
