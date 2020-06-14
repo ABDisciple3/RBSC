@@ -188,8 +188,6 @@ local blessings = {
 	BS[25890], -- Greater Blessing of Light
 	BS[20217], -- Blessing of Kings
 	BS[25898], -- Greater Blessing of Kings
-	BS[27168], -- Blessing of Sanctuary
-	BS[27169], -- Greater Blessing of Sanctuary
 }
 
 local blessingsns = {
