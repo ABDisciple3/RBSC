@@ -3163,17 +3163,17 @@ function RaidBuffStatus:RequestInspect(name, class, unitid)
 		inspectqueueunitid = unitid
 		inspectqueueclass = class
 		if UnitIsUnit(inspectqueueunitid, "player") then
-			RaidBuffStatus:INSPECT_TALENT_READY()
+			RaidBuffStatus:INSPECT_READY()
 		else
 			NotifyInspect(unitid)
-			RaidBuffStatus:RegisterEvent("INSPECT_TALENT_READY")
+			RaidBuffStatus:RegisterEvent("INSPECT_READY")
 		end
 	end
 end
 
 
-function RaidBuffStatus:INSPECT_TALENT_READY()
-	self:UnregisterEvent("INSPECT_TALENT_READY")
+function RaidBuffStatus:INSPECT_READY()
+	self:UnregisterEvent("INSPECT_READY")
 	if inspectqueuename == "" then
 		inspectqueuetime = 0
 		return
@@ -3876,7 +3876,7 @@ end
 
 function RaidBuffStatus:NotifyInspect(unitid)
 	if unitid ~= inspectqueueunitid then
-		self:UnregisterEvent("INSPECT_TALENT_READY")
+		self:UnregisterEvent("INSPECT_READY")
 		inspectqueuename = ""
 		inspectqueueunitid = ""
 		inspectqueuetime = 0
