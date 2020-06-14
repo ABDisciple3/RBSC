@@ -2576,7 +2576,7 @@ function RaidBuffStatus:OnInitialize()
 		MiniMapAngle = math.rad(random(0, 360)),
 		dashcols = 5,
 		ShortenNames = false,
-		Debug = true,
+		Debug = false,
 	}}
 	for buffcheck, _ in pairs(BF) do
 		if BF[buffcheck].list then
