@@ -1,0 +1,2 @@
+Things to do, check, test and fix to make it work with version 3:
+

@@ -1,0 +1,711 @@
+------------------------------------------------------------------------
+r75 | danielbarron | 2008-10-05 21:45:39 +0000 (Sun, 05 Oct 2008) | 1 line
+Changed paths:
+   A /tags/release (from /trunk:74)
+
+Tagging as release.
+------------------------------------------------------------------------
+r74 | root | 2008-09-30 16:08:25 +0000 (Tue, 30 Sep 2008) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Hopefully fix .pkgmeta
+------------------------------------------------------------------------
+r73 | root | 2008-09-29 22:20:31 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   M /trunk
+   A /trunk/.pkgmeta
+
+Facilitate WowAce-on-CurseForge transition
+------------------------------------------------------------------------
+r71 | root | 2008-09-29 20:58:33 +0000 (Mon, 29 Sep 2008) | 1 line
+Changed paths:
+   D /tmp/trunk/RaidBuffStatus
+   A /trunk (from /tmp/trunk/RaidBuffStatus:70)
+
+Importing old repo data under /trunk
+------------------------------------------------------------------------
+r70 | danielbarron | 2008-09-25 19:38:56 +0000 (Thu, 25 Sep 2008) | 2 lines
+Changed paths:
+   A /tmp/trunk/RaidBuffStatus/Version3-TODO.txt
+
+RaidBuffStatus:
+- Initial commit of file listing changes needed to make it work with version 3.
+------------------------------------------------------------------------
+r69 | danielbarron | 2008-09-14 12:12:43 +0000 (Sun, 14 Sep 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Localization/zhCN.lua
+
+RaidBuffStatus:
+- Added and correct some Simplified Chinese translations.
+------------------------------------------------------------------------
+r68 | danielbarron | 2008-09-07 16:26:11 +0000 (Sun, 07 Sep 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/esES.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhCN.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added talent report for Aura Mastery.
+- Added some Spanish translations.
+------------------------------------------------------------------------
+r67 | danielbarron | 2008-09-02 21:58:13 +0000 (Tue, 02 Sep 2008) | 4 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/esES.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhCN.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added talent report for Earth Shield.
+- Added buff check for Shaman Water Shield.
+- Added some simplified Chinese and Spanish translations.
+------------------------------------------------------------------------
+r66 | danielbarron | 2008-08-31 21:06:12 +0000 (Sun, 31 Aug 2008) | 7 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Config.lua
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/esES.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhCN.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Cybersea fixed Inner Fire spell checking. It has been broken since version 2 as it was using a spell name instead of a spell id.
+- Added an option to switch off or on the group number of a person in reporting.
+- Added an option to spam "RBS::" a lot less.
+- Added some more simplified Chinese translations.
+- Fixed weapon buff checking with enhancement shamans.  Now it knows druids don't get Windfury.
+
+------------------------------------------------------------------------
+r65 | Cybersea | 2008-08-30 10:03:40 +0000 (Sat, 30 Aug 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+
+RaidBuffStatus:
+- fixed Inner Fire checking by spell ID
+------------------------------------------------------------------------
+r64 | danielbarron | 2008-08-25 18:46:53 +0000 (Mon, 25 Aug 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Config.lua
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/esES.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhCN.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added an option to allow you to configure if the dashboard automatically shows or not when you join a party or raid.
+------------------------------------------------------------------------
+r63 | danielbarron | 2008-08-25 01:32:41 +0000 (Mon, 25 Aug 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Localization/esES.lua
+   A /tmp/trunk/RaidBuffStatus/Localization/zhCN.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Updated Spanish translation.
+- Added Simplified Chinese translation.
+------------------------------------------------------------------------
+r62 | danielbarron | 2008-08-23 12:24:52 +0000 (Sat, 23 Aug 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Config.lua
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/esES.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Localization/zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added check for Trueshot Aura.
+- Added an option to completely disable the dashboard and buff checking during combat.
+------------------------------------------------------------------------
+r61 | danielbarron | 2008-08-14 22:52:13 +0000 (Thu, 14 Aug 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed issue with it not reading the tank list when reconnecting when already in a raid.
+------------------------------------------------------------------------
+r60 | danielbarron | 2008-08-13 21:10:52 +0000 (Wed, 13 Aug 2008) | 14 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus
+   A /tmp/trunk/RaidBuffStatus/Config.lua
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   D /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   D /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   D /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   D /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   D /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   A /tmp/trunk/RaidBuffStatus/Localization
+   A /tmp/trunk/RaidBuffStatus/Localization/deDE.lua
+   A /tmp/trunk/RaidBuffStatus/Localization/enUS.lua
+   A /tmp/trunk/RaidBuffStatus/Localization/esES.lua
+   A /tmp/trunk/RaidBuffStatus/Localization/frFR.lua
+   A /tmp/trunk/RaidBuffStatus/Localization/zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/MiniMap.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+   A /tmp/trunk/RaidBuffStatus/ToolScanner.lua
+   A /tmp/trunk/RaidBuffStatus/embeds.xml
+   A /tmp/trunk/RaidBuffStatus/oRAEvent.lua
+
+RaidBuffStatus:
+- Ported from Ace2 to Ace3 framework.  Ace3 is faster and uses less memory and provides nice config widgets.
+- You can now alt-click on tanks missing thorns to automatically buff just like the party buffs.
+- Reworked buff checking to be faster and also to not check buffs that are not displayed during combat.
+- Raid scanning is now rate-limited so combat action will not cause lots of CPU usage.
+- Ace 2 Aura-Special-Events library (seemingly-no-longer-maintained) has been replaced with a few lines of my own code.
+- Fixed taint error on clicking on self buffs during combat.
+- Corrected Rumsy Rum Black Label spell id.
+- The few remaining spells referenced by name are now by number for speed.
+- Fixed a long standing bug where if you were the same class as somone who was offline you might be skipped for buff checking.
+- Added the option to report to some different channels.
+- Added an option to allow you to configure the number of buff columns and hense the width and height.
+- Implemented my own minimal replacement for Ace 2 Gratuity library.
+
+------------------------------------------------------------------------
+r57 | danielbarron | 2008-07-31 23:42:51 +0000 (Thu, 31 Jul 2008) | 5 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/MiniMap.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added a Blizzard UI addon options pane.
+- Added option to ignore or not groups 6 to 8.
+- Added option to hide or show the Minimap icon.
+- Added option to report only to self instead of raid.
+------------------------------------------------------------------------
+r56 | danielbarron | 2008-07-30 17:35:52 +0000 (Wed, 30 Jul 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Updated Spanish translations.
+------------------------------------------------------------------------
+r55 | danielbarron | 2008-07-27 20:47:50 +0000 (Sun, 27 Jul 2008) | 4 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added Righteous and Blessed Weapon Coatings to the weapon buffs list.
+- Added talent report on improved Battle Shout.
+- Added some checks for being in combat or not and if in combat disable some protected actions causing taint log spam.
+------------------------------------------------------------------------
+r54 | danielbarron | 2008-07-10 22:31:36 +0000 (Thu, 10 Jul 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   A /tmp/trunk/RaidBuffStatus/MiniMap.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added a minimap button.
+- Group 6 is again ignored due to popular demand.
+------------------------------------------------------------------------
+r53 | danielbarron | 2008-07-06 22:29:01 +0000 (Sun, 06 Jul 2008) | 7 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Role information and main tank lists are now parsed to be able to know who is a tank.
+- Added a new warning for mele tanks missing thorns.
+- Added a new warning for tanks with salvation.
+- Group 6 is no longer ignored so you must use groups 7 and 8 for reserves.  This will be configurable in the future.
+- Buffers on tooltips now in green to make it clearer.
+- Added a button that shows the tanks.  Hidden by default.  The tanks listed are, in theory, true tanks and not just those listed on the tank list.  I.e. it looks at spec etc.
+------------------------------------------------------------------------
+r52 | danielbarron | 2008-07-05 17:44:10 +0000 (Sat, 05 Jul 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed bug causing an error to pop up sometimes when the tank list is set up.
+------------------------------------------------------------------------
+r51 | danielbarron | 2008-06-30 20:06:15 +0000 (Mon, 30 Jun 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed problem with German translation file.
+------------------------------------------------------------------------
+r50 | danielbarron | 2008-06-29 21:09:10 +0000 (Sun, 29 Jun 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed bug in Paladin blessing checking for Druids and Shamans.
+------------------------------------------------------------------------
+r49 | danielbarron | 2008-06-25 22:17:50 +0000 (Wed, 25 Jun 2008) | 9 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed some bugs with temporary weapon buff checking.
+- Removed the warning about temporary weapon buff checking being experimental.  It seems to work but is range limited.
+- Mele dps with a temporary weapon buff and are in a group with an enhancement shaman will show a warning.
+- Reworked Paladin blessing checking to cope with fringe scenarios better.
+- Party based buffs now show in the tooltip who the buffers are, as well.
+- Added a fake buff button.  The tooltip gives help information.  It can be disabled in the options window.
+- Alt-click on a self buff will renew that buff.
+- Alt-click on a party buff will cast a spell on someone in a party missing that buff.  If 3 or more people are missing, the longer reagent buff will be cast otherwise the shorter one.
+------------------------------------------------------------------------
+r48 | danielbarron | 2008-06-02 21:37:35 +0000 (Mon, 02 Jun 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed bug with Paladin blessings and Feral Combat druids and Enhancement Shamans.
+- Added temporary weapon buff checking.  Warning: This is experimental code.
+------------------------------------------------------------------------
+r47 | danielbarron | 2008-05-31 13:16:17 +0000 (Sat, 31 May 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed some of the Paladin blessing checking especially when in a party.
+------------------------------------------------------------------------
+r46 | danielbarron | 2008-05-30 22:43:53 +0000 (Fri, 30 May 2008) | 4 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added a check for Priests, Mages and Warlocks with Blessing of Might.  And Rogues with Blessing of Wisdom.
+- Added a check that looks for players obviously missing Paladin blessings.
+- Added a check for Amplify Magic. It is disabled and hidden by default as most encounters don't need it. Enable in the options window.
+------------------------------------------------------------------------
+r45 | danielbarron | 2008-05-28 22:34:56 +0000 (Wed, 28 May 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added the option to hide selected dashboard items on entering combat to reduce the size and only show what matters in combat.
+------------------------------------------------------------------------
+r44 | danielbarron | 2008-05-21 22:24:15 +0000 (Wed, 21 May 2008) | 7 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added a feature where it tells you how long someone was AFK, Offline, PVP or dead.
+- Added a feature where Ctrl-click Shadow Protection and it will whisper all the Priests a list of who needs it.
+- Added a feature where Ctrl-click Arcane Intellect and it will whisper all the Mages a list of who needs it.
+- Added a feature where Ctrl-click Mark of the Wild and it will whisper all the Druids, with the most talent points spend in MotW, a list of who needs it.
+- Added a feature where Ctrl-click Fortitude and it will whisper all the Priests, with the most talent points spend in Fortitude, a list of who needs it.
+- Added a feature where Ctrl-click Spirit and it will whisper all the Priests, with the most talent points spend in Spirit, a list of who needs it.
+------------------------------------------------------------------------
+r43 | danielbarron | 2008-05-13 23:26:07 +0000 (Tue, 13 May 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed some translation and zone issues with the flask zone checker.
+- Added some Spanish translations.
+------------------------------------------------------------------------
+r42 | danielbarron | 2008-05-12 22:22:29 +0000 (Mon, 12 May 2008) | 10 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added the ability to Ctrl-click a self buff and have the addon whisper those who need it.
+- Added some Spanish translations.
+- Added a talent report for Paladins with Kings and Sanctuary.
+- Added a talent report for Warriors with improved demo shout.
+- Auto-disabled buffs are now faded out on the dashboard for improved clarity.
+- Disabled buffs are now faded out and have a cross on the dashboard for improved clarity.
+- Shift clicking a missing buff will now display in raid "Missing buff:" or "Warning:" as appropriate.
+- Sorting has been made slightly neater.
+- Added a new warning which checks the flasks are correct for the zone, eg Unstable at Gruul.
+------------------------------------------------------------------------
+r41 | danielbarron | 2008-04-30 22:28:06 +0000 (Wed, 30 Apr 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added options window which allows you to configure which buffs to check and when.
+------------------------------------------------------------------------
+r39 | danielbarron | 2008-04-21 18:40:54 +0000 (Mon, 21 Apr 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Corrected some Spanish translations.
+------------------------------------------------------------------------
+r38 | danielbarron | 2008-04-20 21:51:29 +0000 (Sun, 20 Apr 2008) | 8 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Corrected positioning of the Ready check button.
+- Hidden Options Window button as it's taken longer than expected to get around to implementing it.
+- Removed BabbleSpell and instead use GetSpellInfo() with spell IDs.
+- Removed a huge number of translation lines that are now automatically translated using GetSpellInfo().
+- Added some translations for the Ready check button.
+- When no buffs are needed it now also lets you know if it was a Boss or a Trash check.
+
+------------------------------------------------------------------------
+r37 | danielbarron | 2008-04-12 20:22:18 +0000 (Sat, 12 Apr 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added a Ready Check button.
+------------------------------------------------------------------------
+r36 | danielbarron | 2008-04-12 08:26:19 +0000 (Sat, 12 Apr 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed German translation by commenting out the translations not done and by doing some.
+------------------------------------------------------------------------
+r35 | danielbarron | 2008-04-10 18:47:29 +0000 (Thu, 10 Apr 2008) | 5 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   A /tmp/trunk/RaidBuffStatus/Locale-esES.lua
+   A /tmp/trunk/RaidBuffStatus/Locale-frFR.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added Spanish translations by Tanagra on Kul Tiras Europe server.
+- Added French translations by Veve CDO EU Server.
+- Fixed bug causing error when other addons check talents.
+- Added zhTW translations.  Actually someone ninja added it to SVN not me.
+------------------------------------------------------------------------
+r34 | linsu | 2008-04-09 23:32:02 +0000 (Wed, 09 Apr 2008) | 2 lines
+Changed paths:
+   A /tmp/trunk/RaidBuffStatus/Locale-zhTW.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+
+RaidBuffStatus:
+- update zhTW
+------------------------------------------------------------------------
+r33 | danielbarron | 2008-04-09 17:43:27 +0000 (Wed, 09 Apr 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed MotW report.  It incorrectly reported 4 or 5 points spent even when they where not.
+------------------------------------------------------------------------
+r32 | danielbarron | 2008-04-07 23:30:33 +0000 (Mon, 07 Apr 2008) | 3 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added check that a Mage has an armor self buff.
+- Default talent report sort order is class now.
+------------------------------------------------------------------------
+r31 | danielbarron | 2008-04-05 19:13:05 +0000 (Sat, 05 Apr 2008) | 6 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Displaying of group numbers is now sorted by group number in the report.
+- A number of the buffs are no longer checked if the person is not in the same zone.
+- Rogues and Warriors are now ignored for Intellect and Spirit buffs.
+- Reports on Priests with Lightwell ability.
+- Reports on Priests with improved Power Word: Fortitude.
+------------------------------------------------------------------------
+r30 | danielbarron | 2008-04-04 17:47:56 +0000 (Fri, 04 Apr 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added diplaying of group number next to the character name on group buffs.
+------------------------------------------------------------------------
+r29 | danielbarron | 2008-04-02 22:37:02 +0000 (Wed, 02 Apr 2008) | 5 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added report on Warlock healthstone talents.
+- Added check for Druids who have the Omen of Clarity talent point that they have self buffed with it.
+- Fixed Shattrath Flask of Pure Death and Shattrath Flask of Blinding Light.  Stupid Blizzard inconsistent naming.
+- Fixed missing tool tip for Shadow Aura and Protection.
+------------------------------------------------------------------------
+r28 | danielbarron | 2008-03-30 22:21:59 +0000 (Sun, 30 Mar 2008) | 11 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Changed talent inspection to work properly with 2.4.
+- Added check for Fel Armor.
+- Added a talent and specialisation report window.  Many more specialisation reports to come in future.
+- Moved the spirit buff talent announce from raid chat to just display on the talent report window.
+- Added a talent report for priests with improved spirit buff.
+- Tidied German translations file.  It sill needs some translations.
+- It now ignores players in groups 5 and above.  This is a temporary change until something better is written.
+- Text colours now set properly.
+- Fixed bug in dynamic button layout maths.
+- Added report for Druids with improved Mark of the Wild.
+------------------------------------------------------------------------
+r27 | danielbarron | 2008-03-26 19:57:29 +0000 (Wed, 26 Mar 2008) | 5 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Updated to WoW version 2.4.
+- Added missing flasks Mr Pinchy's Blessing, Flask of Blinding Light, Flask of Pure Death.
+- Added new 2.4 flasks Shattrath Flask of Pure Death and Shattrath Flask of Blinding Light.
+- Mouse-over hi-lighting added.
+------------------------------------------------------------------------
+r26 | danielbarron | 2008-03-25 20:45:15 +0000 (Tue, 25 Mar 2008) | 10 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added /rbs toggle option for toggling open and close the dashboard.
+- Fixed bug: frame and icons not on same level.  Now comes to front when clicked.
+- Fixed bug: offline check would not disable.
+- Fixed bug: tooltip was much too wide when many people need a buff.
+- Added ability to shift click and report only on a single missing buff.
+- Priest with spirit buff detected now only appears if you are the leader.
+- Added check for Inner Fire.
+- Fixed bug: missing number of buffs and warnings are correctly counted again now.
+- It no longer says it has activated on start.  No need to add to the other spam.
+------------------------------------------------------------------------
+r24 | danielbarron | 2008-03-24 09:56:14 +0000 (Mon, 24 Mar 2008) | 7 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   A /tmp/trunk/RaidBuffStatus/Locale-deDE.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added German translations. (Done by Farook)
+- Completely re-worked how buttons and buff checks are stored and displayed.  Now it is completely dynamic thus making it easier to add more checks and an options window in the near future.
+- Boss only buff checks are now in their own section.
+- Window title changed to RBS 1.3.
+- Disabled-manually buffs now display a "." instead of being blank so you can tell the difference between disabled and not being used due to lack of a class.
+- Soulstone is now a boss check only.
+------------------------------------------------------------------------
+r23 | danielbarron | 2008-03-15 12:39:45 +0000 (Sat, 15 Mar 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed addon name in game so it says ace2
+------------------------------------------------------------------------
+r22 | danielbarron | 2008-03-14 16:37:01 +0000 (Fri, 14 Mar 2008) | 4 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Fixed bug: Re-showing all the time.  Now hiding stays hidden until you join a party or raid again.
+- Added to the Well Fed check "Increased Stamina", "Rumsey Rum Black Label", and "Electrified".
+
+------------------------------------------------------------------------
+r21 | danielbarron | 2008-03-09 23:50:14 +0000 (Sun, 09 Mar 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+
+RaidBuffStatus:
+- Corrected version number
+------------------------------------------------------------------------
+r20 | danielbarron | 2008-03-09 23:48:40 +0000 (Sun, 09 Mar 2008) | 12 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus/Core.lua
+   M /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   M /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   M /tmp/trunk/RaidBuffStatus/ReadMe.txt
+
+RaidBuffStatus:
+- Added more checks for:
+- Hunter with no aspect
+- Hunter with aspect of the pack or cheetah
+- Protection paladin with no Righteous Fury
+- Someone has a soul stone
+- Fixed bug: Checks events actually registered before unregistering
+- Fixed bug: Shadow and Aura at same time check not enabling
+- Fixed bug: Sometimes an inspect fails and this is now captured
+- Fixed bug: Noisy talent inspection addons would interfere with the inspect ready event so
+   this is handled by using a secure hook
+-- toc file now has svn revision information
+------------------------------------------------------------------------
+r19 | danielbarron | 2008-03-08 03:31:41 +0000 (Sat, 08 Mar 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus
+
+RaidBuffStatus:
+- fixed externals for babble and aura
+------------------------------------------------------------------------
+r18 | danielbarron | 2008-03-08 03:19:32 +0000 (Sat, 08 Mar 2008) | 2 lines
+Changed paths:
+   M /tmp/trunk/RaidBuffStatus
+
+RaidBuffStatus:
+- setting externals
+------------------------------------------------------------------------
+r17 | danielbarron | 2008-03-08 03:03:49 +0000 (Sat, 08 Mar 2008) | 2 lines
+Changed paths:
+   A /tmp/trunk/RaidBuffStatus
+   A /tmp/trunk/RaidBuffStatus/Core.lua
+   A /tmp/trunk/RaidBuffStatus/Locale-enUS.lua
+   A /tmp/trunk/RaidBuffStatus/RaidBuffStatus.toc
+   A /tmp/trunk/RaidBuffStatus/ReadMe.txt
+   A /tmp/trunk/RaidBuffStatus/license.txt
+
+RaidBuffStatus: initial commit
+- Reports to /raid or /party on consumables, buffs, PVP, AFK, crusader aura and many many others but in an intelligent automagic way
+------------------------------------------------------------------------

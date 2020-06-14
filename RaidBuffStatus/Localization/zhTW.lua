@@ -1,0 +1,190 @@
+--翻譯：靈素
+
+local AceLocale = LibStub:GetLibrary("AceLocale-3.0")
+local L = AceLocale:NewLocale("RaidBuffStatus", "zhTW")
+if not L then return end
+
+-- Command options
+
+	L["Show the buff report dashboard."] = "顯示增益報告統計視窗"
+	L["Hide the buff report dashboard."] = "隱藏增益報告統計視窗"
+	L["Report to /raid or /party who is not buffed to the max."] = "報告至團隊或隊伍誰沒有最大化之增益"
+	L["Hide and show the buff report dashboard."] = "隱藏/顯示增益報告統計視窗"
+
+-- Messages
+
+	L["No buffs needed! (Boss)"] = "沒有需要的增益 (首領)"
+	L["No buffs needed! (Trash)"] = "沒有需要的增益 (小怪)"
+	L["Not Well Fed"] = "沒有充分進食"
+	L["Missing Arcane Intellect"] = "缺少秘法智慧"
+	L["Missing Mark of the Wild"] = "缺少野性印記"
+	L["Missing Divine Spirit"] = "缺少神聖之靈"
+	L["Missing Power Word: Fortitude"] = "缺少真言術:韌"
+	L["Missing Shadow Protection"] = "缺少暗影防護"
+	L["Flask or two Elixirs"] = "精煉藥劑或兩種藥劑"
+	L["Missing a Flask or two Elixirs"] = "缺少精煉藥劑或兩種藥劑"
+	L["Battle Elixir"] = "作戰藥劑"
+	L["Missing a Battle Elixir"] = "缺少作戰藥劑"
+	L["Guardian Elixir"] = "守護藥劑"
+	L["Missing a Guardian Elixir"] = "缺少守護藥劑"
+	L["Missing buffs (Trash): "] = "缺少增益 (小怪): "
+	L["Missing buffs (Boss): "] = "缺少增益 (首領): "
+	L["Warnings: "] = "警告: "
+--	L["Paladin has Crusader Aura"] =
+	L["PVP On"] = "PVP狀態"
+	L["PVP is On"] = "PVP狀態開啟"
+	L["AFK"] = "暫離"
+	L["Player is AFK"] = "成員暫離"
+	L["Offline"] = "離線"
+	L["Player is Offline"] = "成員離線"
+	L["Shadow Resistance Aura AND Shadow Protection"] = "暗影抗性光環與暗影防護"
+	L["Paladin has Shadow Resistance Aura AND Shadow Protection"] = "聖騎擁有暗影抗性光環與暗影防護"
+	L["Paladin Aura"] = "聖騎光環"
+	L["Paladin has no Aura at all"] = "聖騎根本沒有光環"
+	L["Paladin Different Aura - Group"] = "聖騎不同的光環 - 小隊"
+	L["There are more Paladins than different Auras in group"] = "小隊裡有超過光環數目的聖騎"
+	L["Dead"] = "死亡"
+	L["Player is Dead"] = "成員死亡"
+	L["Different Zone"] = "不同區域"
+	L["Player is in a different zone"] = "成員在不同區域"
+	L["Health less than 80%"] = "血量少於80%"
+	L["Player has health less than 80%"] = "成員血量少於80%"
+	L["Mana less than 80%"] = "法力少於80%"
+	L["Player has mana less than 80%"] = "成員法力少於80%"
+	L["Boss"] = "首領"
+	L["Trash"] = "小怪"
+--	L["R"] = -- R is short for Ready
+	L["Aspect Cheetah/Pack On"] = "獵豹/豹群守護開啟"
+	L["Hunter Aspect"] = "獵人守護"
+	L["Aspect of the Cheetah or Pack is on"] = "獵豹/豹群守護開啟中"
+	L["Hunter has no aspect at all"] = "獵人根本沒有光環"
+--	L["Hunter is missing Trueshot Aura"] = ""
+	L["Protection paladin with no Righteous Fury"] = "防騎沒有正義之怒"
+	L["No Soulstone detected"] = "偵測不到靈魂石"
+	L["Someone has a Soulstone"] = "某人擁有靈魂石"
+	L["Priest is missing Inner Fire"] = "牧師沒有心靈之火"
+	L["Warlock is missing Fel Armor"] = "術士沒有獄甲術"
+	L["Druid is missing Omen of Clarity"] = "德鲁伊沒有清晰預兆"
+	L["Mage is missing a Mage Armor"] = "法師沒有護甲術"
+--	L["Warning: "] =
+--	L["Missing buff: "] =
+--	L["Gruul's Lair"] =
+--	L["Tempest Keep"] =
+--	L["Serpentshrine Cavern"] =
+--	L["Black Temple"] =
+--	L["Sunwell Plateau"] =
+--	L["Hyjal Summit"] =
+--	L["Wrong flask for this zone"] =
+--	L["Weapon buff"] =
+--	L["Missing a temporary weapon buff"] =
+--	L["(Ward of Shielding)"] =
+--	L["^(Weighted %(%+%d+)"] =
+--	L["^(Sharpened %(%+%d+)"] =
+--	L["( Poison ?[IVX]*)"] =
+--	L["(Mana Oil)"] =
+--	L["(Wizard Oil)"] =
+--	L["(Frost Oil)"] =
+--	L["(Shadow Oil)"] =
+--	L["(Weapon Coating)"] =
+--	L["Wrong Paladin blessing"] =
+--	L["Player has a wrong Paladin blessing"] =
+--	L["Paladin blessing"] =
+--	L["Player is missing at least one Paladin blessing"] =
+--	L["Missing Amplify Magic"] =
+--	L["RBS Dashboard Help"] =
+--	L["Click buffs to disable and enable."] =
+--	L["Shift-Click buffs to report on only that buff."] =
+--	L["Ctrl-Click buffs to whisper those who need to buff."] =
+--	L["Alt-Click on a self buff will renew that buff."] =
+--	L["Alt-Click on a party buff will cast on someone missing that buff."] =
+--	L["Press Escape -> Interface -> AddOns -> RaidBuffStatus for more options."] =
+--	L["Remove this button from this dashboard in the buff options window."] =
+--	L["Buffers: "] =
+--	L["(Remove buff)"] =
+--	L["Tank missing Thorns"] =
+--	L["Tank with Salvation"] =
+--	L["Out of range"] =
+--	L["RBS Tank List"] =
+--	L["Click to toggle the RBS dashboard"] =
+--	L["Right-click to open the addons options menu"] =
+--	L["Shaman is missing Water Shield"] = 
+--	L["Tank missing Earth Shield"] = 
+--	L["Has Aura Mastery"] = 
+
+
+
+-- Talents window
+
+	L["Talent Specialisations"] = "天賦特化"
+	L["Name"] = "玩家名稱"
+	L["Class"] = "職業"
+--	L["Spec"] =
+--	L["Specialisations"] =
+	L["Can buff Divine Spirit"] = "可以施放神聖之靈"
+	L["Can buff improved Divine Spirit level 1"] = "可以施放強化神聖之靈等級一"
+	L["Can buff improved Divine Spirit level 2"] = "可以施放強化神聖之靈等級二"
+	L["Can buff improved Mark of the Wild level 1"] = "可以施放強化野性印記等級一"
+	L["Can buff improved Mark of the Wild level 2"] = "可以施放強化野性印記等級二"
+	L["Can buff improved Mark of the Wild level 3"] = "可以施放強化野性印記等級三"
+	L["Can buff improved Mark of the Wild level 4"] = "可以施放強化野性印記等級四"
+	L["Can buff improved Mark of the Wild level 5"] = "可以施放強化野性印記等級五"
+	L["Improved Health Stone level 1"] = "強化治療石等級一"
+	L["Improved Health Stone level 2"] = "強化治療石等級二"
+	L["Can create a Lightwell"] = "可以製造光束泉"
+	L["Can buff improved Power Word: Fortitude level 1"] = "可以施放強化真言術:韌等級一"
+	L["Can buff improved Power Word: Fortitude level 2"] = "可以施放強化真言術:韌等級二"
+--	L["Can buff improved Demoralizing Shout level 1"] =
+--	L["Can buff improved Demoralizing Shout level 2"] =
+--	L["Can buff improved Demoralizing Shout level 3"] =
+--	L["Can buff improved Demoralizing Shout level 4"] =
+--	L["Can buff improved Demoralizing Shout level 5"] =
+--	L["Can buff improved Battle Shout level 1"] =
+--	L["Can buff improved Battle Shout level 2"] =
+--	L["Can buff improved Battle Shout level 3"] =
+--	L["Can buff improved Battle Shout level 4"] =
+--	L["Can buff improved Battle Shout level 5"] =
+--	L["Can buff Blessing of Kings"] =
+--	L["Can buff Blessing of Sanctuary"] =
+--	L["Can buff Earth Shield"] = 
+
+-- Options window
+--	L["Buff Options"] =
+--	L["Is a warning"] =
+--	L["Is a buff"] =
+--	L["Show on dashboard"] =
+--	L["Report on Boss"] =
+--	L["Report on Trash"] =
+--	L["Show/Report in combat"] =
+
+-- Blizzard addons window
+--	L['Appearance'] =
+--	L['Skin and minimap options'] =
+--	L["Minimap icon"] =
+--	L['Toggle to display a minimap icon'] =
+--	L['Background colour'] =
+--	L['Border colour'] =
+--	L['Dashboard columns'] =
+--	L['Number of columns to display on the dashboard'] =
+--	L['Reporting'] =
+--	L['Reporting options'] =
+--	L['Ignore groups 6 to 8 when reporting as these are for subs'] =
+--	L['Ignore groups 6 to 8'] =
+--	L['Report to self'] =
+--	L['Report to raid/party'] =
+--	L['Report to raid/party - requires raid assistant'] =
+--	L['Report to officers'] =
+--	L['Report to officer channel'] =
+--	L['Shorten names'] =
+--	L['Shorten names in the report to reduce channel spam'] =
+--	L['Combat'] = 
+--	L['Combat options'] = 
+--	L['Disable in combat'] = 
+--	L['Hide dashboard and skip buff checking during combat'] = 
+--	L['Show in party'] = 
+--	L['Automatically show the dashboard when you join a party'] = 
+--	L['Show in raid'] = 
+--	L['Automatically show the dashboard when you join a raid'] = 
+--	L['Prepend RBS::'] = 
+--	L['Prepend RBS:: to all lines of report chat. Disable to only prepend on the first line of a report'] = 
+--	L['Show group number'] = 
+--	L['Show the group number of the person missing a party buff'] = 

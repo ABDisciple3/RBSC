@@ -1,0 +1,31 @@
+## Interface: 20400
+## Title: RaidBuffStatus|cff7fff7f -Ace3-|r
+## Author: Danielbarron
+## Version: 2.06
+## X-Build: $Revision: 68 $
+## X-ReleaseDate: "$Date: 2008-09-07 16:26:11 +0000 (Sun, 07 Sep 2008) $"
+## Notes: Reports to /raid or /party on consumables, buffs, PVP, AFK, mana, crusader aura, talent spec and many many others but in an intelligent automagic way. RBS is the nail in the coffin of all slacking raiders.
+## eMail: daniel@jadeb.com
+## URL: http://www.wowace.com/wiki/RaidBuffStatus
+## DefaultState: Enabled
+## OptionalDeps: Ace3, oRA2
+## SavedVariables: RaidBuffStatusDB, RaidBuffStatusDefaultProfile
+## X-Category: Raid
+## X-Embeds: Ace3
+
+## By Danielbarron on Kul Tiras Europe (Daniel Barron)
+
+embeds.xml
+
+Localization\enUS.lua
+Localization\frFR.lua
+Localization\deDE.lua
+Localization\zhTW.lua
+Localization\zhCN.lua
+Localization\esES.lua
+
+Core.lua
+Config.lua
+MiniMap.lua
+ToolScanner.lua
+oRAEvent.lua
