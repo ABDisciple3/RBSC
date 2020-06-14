@@ -3321,15 +3321,17 @@ function RaidBuffStatus:SetupFrames()
 	})
 	RaidBuffStatus.frame:ClearAllPoints()
 	RaidBuffStatus.frame:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
-	RaidBuffStatus.frame:SetScript("OnMouseDown",function()
-		if ( arg1 == "LeftButton" ) then
+	RaidBuffStatus.frame:SetScript("OnMouseDown",function(...)
+		local arg = {...}
+		if ( arg[2] == "LeftButton" ) then
 			if not RaidBuffStatus.db.profile.LockWindow then
 				RaidBuffStatus.frame:StartMoving()
 			end
 		end
 	end)
-	RaidBuffStatus.frame:SetScript("OnMouseUp",function()
-		if ( arg1 == "LeftButton" ) then
+	RaidBuffStatus.frame:SetScript("OnMouseUp",function(...)
+		local arg = {...}
+		if ( arg[2] == "LeftButton" ) then
 			RaidBuffStatus.frame:StopMovingOrSizing()
 			RaidBuffStatus:SaveFramePosition()
 		end
@@ -3412,15 +3414,17 @@ function RaidBuffStatus:SetupFrames()
 	})
 	RaidBuffStatus.talentframe:ClearAllPoints()
 	RaidBuffStatus.talentframe:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
-	RaidBuffStatus.talentframe:SetScript("OnMouseDown",function()
-		if ( arg1 == "LeftButton" ) then
+	RaidBuffStatus.talentframe:SetScript("OnMouseDown",function(...)
+		local arg = {...}
+		if ( arg[2] == "LeftButton" ) then
 			if not RaidBuffStatus.db.profile.LockWindow then
 				RaidBuffStatus.talentframe:StartMoving()
 			end
 		end
 	end)
-	RaidBuffStatus.talentframe:SetScript("OnMouseUp",function()
-		if ( arg1 == "LeftButton" ) then
+	RaidBuffStatus.talentframe:SetScript("OnMouseUp",function(...)
+		local arg = {...}
+		if ( arg[2] == "LeftButton" ) then
 			RaidBuffStatus.talentframe:StopMovingOrSizing()
 			RaidBuffStatus:SaveFramePosition()
 		end
@@ -3546,15 +3550,17 @@ function RaidBuffStatus:SetupFrames()
 	})
 	RaidBuffStatus.optionsframe:ClearAllPoints()
 	RaidBuffStatus.optionsframe:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
-	RaidBuffStatus.optionsframe:SetScript("OnMouseDown",function()
-		if ( arg1 == "LeftButton" ) then
+	RaidBuffStatus.optionsframe:SetScript("OnMouseDown",function(...)
+		local arg = {...}
+		if ( arg[2] == "LeftButton" ) then
 			if not RaidBuffStatus.db.profile.LockWindow then
 				RaidBuffStatus.optionsframe:StartMoving()
 			end
 		end
 	end)
-	RaidBuffStatus.optionsframe:SetScript("OnMouseUp",function()
-		if ( arg1 == "LeftButton" ) then
+	RaidBuffStatus.optionsframe:SetScript("OnMouseUp",function(...)
+		local arg = {...}
+		if ( arg[2] == "LeftButton" ) then
 			RaidBuffStatus.optionsframe:StopMovingOrSizing()
 			RaidBuffStatus:SaveFramePosition()
 		end
