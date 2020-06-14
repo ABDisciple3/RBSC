@@ -129,7 +129,7 @@ local wild = {
 }
 
 local intellect = {
-	SpellName(1459), -- Arcane Intellect
+	SpellName(10157), -- Arcane Intellect
 	SpellName(23028), -- Arcane Brilliance
 }
 
@@ -937,8 +937,8 @@ BF = {
 		main = function(self, name, class, unit, raid, report)
 			if not unit.isdead then
 				if class ~= "WARRIOR" and class ~= "ROGUE" then
-					local maxmana = UnitManaMax(unit.unitid)
-					local mana = UnitMana(unit.unitid)
+					local maxmana = UnitPowerMax(unit.unitid)
+					local mana = UnitPower(unit.unitid)
 					local percent = (mana/maxmana)*100
 					if percent < 80 then
 						table.insert(report.manalist, name)
@@ -1758,7 +1758,7 @@ BF = {
 		checkzonedout = false,
 		selfbuff = false,
 		timer = false,
-		chat = BS[1459], -- Arcane Intellect
+		chat = BS[10157], -- Arcane Intellect
 		pre = nil,
 		main = function(self, name, class, unit, raid, report)
 			if raid.ClassNumbers.MAGE > 0 then
@@ -1784,12 +1784,12 @@ BF = {
 		post = function(self, raid, report)
 			RaidBuffStatus:SortNameBySuffix(report.intellectlist)
 		end,
-		icon = BSI[1459], -- Arcane Intellect
+		icon = BSI[10157], -- Arcane Intellect
 		update = function(self)
 			RaidBuffStatus:DefaultButtonUpdate(self, report.intellectlist, RaidBuffStatus.db.profile.checkintellect, report.checking.intellect or false)
 		end,
 		click = function(self, button, down)
-			RaidBuffStatus:ButtonClick(self, button, down, "intellect", BS[1459], BS[23028], true) -- Arcane Intellect and Arcane Brilliance
+			RaidBuffStatus:ButtonClick(self, button, down, "intellect", BS[10157], BS[23028], true) -- Arcane Intellect and Arcane Brilliance
 		end,
 		tip = function(self)
 			RaidBuffStatus:Tooltip(self, L["Missing Arcane Intellect"], report.intellectlist, nil, BF.intellect:buffers())
@@ -3010,7 +3010,7 @@ function RaidBuffStatus:ReadRaid()
 	raid.readid = raid.readid + 1
 	raid.TankList = {}
 	local raidnum = GetNumGroupMembers()
-	local partynum = GetNumGroupMembers()
+	local partynum = GetNumSubgroupMembers(LE_PARTY_CATEGORY) > 0
 --	RaidBuffStatus:Debug("tankList:" .. tankList)
 	if raidnum < 2 then
 		if partynum < 1 then
@@ -3182,7 +3182,7 @@ function RaidBuffStatus:INSPECT_TALENT_READY()
 	if UnitIsUnit(inspectqueueunitid, "player") then
 		isnotme = false
 	end
-	if GetNumTalentTabs(isnotme) == 0 then -- sometimes the inspect fails
+	if GetNumSpecializations(isnotme) == 0 then -- sometimes the inspect fails
 		ClearInspectPlayer()
 		inspectqueuetime = 0
 		return
@@ -3194,8 +3194,8 @@ function RaidBuffStatus:INSPECT_TALENT_READY()
 	raid.classes[class][name].talents = { tree = {}, spec = "UNKNOWN", specicon = "UNKNOWN", specialisations = {} }
 	local tree = raid.classes[class][name].talents.tree
 	local tabtotal = {0, 0, 0}
-	for tab = 1, GetNumTalentTabs(isnotme) do
-		local name, icon, spent = GetTalentTabInfo(tab, isnotme);
+	for tab = 1, GetNumSpecializations(isnotme) do
+		local name, icon, spent = GetSpecializationInfo(tab, isnotme);
 		tree[tab] = {name=name, icon=icon, spent=spent, talent={ }};
 		for talent = 1, GetNumTalents(tab, isnotme) do
 			tree[tab].talent[talent] = select(5, GetTalentInfo(tab, talent, isnotme));
@@ -3234,7 +3234,8 @@ function RaidBuffStatus:Say(msg, player, prepend)
 		pre = "RBS::"
 	end
 	local str = pre
-	local canspeak = IsRaidLeader() or IsRaidOfficer()
+	print("Player")
+	local canspeak = UnitIsGroupLeader("player") or UnitIsGroupAssistant("player")
 	for _,s in pairs({strsplit(" ", msg)}) do
 		if #str + #s >= 250 then
 			if player then
@@ -3355,7 +3356,7 @@ function RaidBuffStatus:SetupFrames()
 	RaidBuffStatus.button:SetWidth(22)
 	RaidBuffStatus.button:SetPoint("BOTTOM", RaidBuffStatus.frame, "BOTTOM", 0, 5)
 	RaidBuffStatus.button:SetScript("OnClick", function()
-		if IsRaidLeader() or IsRaidOfficer() then
+		if UnitIsGroupLeader("Player", LE_PARTY_CATEGORY_HOME) or UnitIsGroupAssistant("Player", LE_PARTY_CATEGORY_HOME) then
 			DoReadyCheck()
 		end
 	end)
@@ -3849,7 +3850,7 @@ function RaidBuffStatus:JoinedPartyRaidChanged()
 			RaidBuffStatus:oRA_MainTankUpdate()
 		else	-- no longer in raid or party
 			RaidBuffStatus:HideReportFrame()
-			RaidBuffStatus:UnregisterEvent("PLAYER_AURAS_CHANGED")
+			RaidBuffStatus:UnregisterEvent("UNIT_AURA")
 			if timer then
 				RaidBuffStatus:CancelTimer(timer)
 				timer = false
@@ -3858,7 +3859,7 @@ function RaidBuffStatus:JoinedPartyRaidChanged()
 	else
 		if raid.isparty or raid.israid then -- newly entered raid or party
 			RaidBuffStatus:oRA_MainTankUpdate()
-			RaidBuffStatus:RegisterEvent("PLAYER_AURAS_CHANGED", "DoReport")
+			RaidBuffStatus:RegisterEvent("UNIT_AURA", "DoReport")
 			timer = RaidBuffStatus:ScheduleRepeatingTimer(RaidBuffStatus.DoReport, 7)
 		end
 		if (raid.isparty and RaidBuffStatus.db.profile.AutoShowDashParty) or (raid.israid and RaidBuffStatus.db.profile.AutoShowDashRaid) then
@@ -3883,7 +3884,7 @@ function RaidBuffStatus:OnEnable()
 	RaidBuffStatus:JoinedPartyRaidChanged()
 	RaidBuffStatus:UpdateMiniMapButton()
 	RaidBuffStatus:RegisterEvent("RAID_ROSTER_UPDATE", "JoinedPartyRaidChanged")
-	RaidBuffStatus:RegisterEvent("PARTY_MEMBERS_CHANGED", "JoinedPartyRaidChanged")
+	RaidBuffStatus:RegisterEvent("GROUP_ROSTER_UPDATE", "JoinedPartyRaidChanged")
 	RaidBuffStatus:RegisterEvent("PLAYER_ENTERING_WORLD", "JoinedPartyRaidChanged")
 	RaidBuffStatus:RegisterEvent("PLAYER_REGEN_ENABLED", "LeftCombat")
 	RaidBuffStatus:RegisterEvent("PLAYER_REGEN_DISABLED", "EnteringCombat")
