@@ -8,16 +8,16 @@ function RBSMinimapButton:Load()
 	self:SetFrameLevel(8)
 	self:RegisterForClicks('anyUp')
 	self:RegisterForDrag('LeftButton')
-	self:SetHighlightTexture('Interface/Minimap/UI-Minimap-ZoomButton-Highlight')
+	self:SetHighlightTexture('Interface\\Minimap\\UI-Minimap-ZoomButton-Highlight')
 
 	local overlay = self:CreateTexture(nil, 'OVERLAY')
 	overlay:SetWidth(53); overlay:SetHeight(53)
-	overlay:SetTexture('Interface/Minimap/MiniMap-TrackingBorder')
+	overlay:SetTexture('Interface\\Minimap\\MiniMap-TrackingBorder')
 	overlay:SetPoint('TOPLEFT')
 
 	local icon = self:CreateTexture(nil, 'BACKGROUND')
 	icon:SetWidth(20); icon:SetHeight(20)
-	icon:SetTexture('Interface/Icons/Ability_Hunter_MasterMarksman')
+	icon:SetTexture('Interface\\Icons\\Ability_Marksmanship')
 	icon:SetTexCoord(0.05, 0.95, 0.05, 0.95)
 	icon:SetPoint('TOPLEFT', 7, -5)
 	self.icon = icon
@@ -44,7 +44,7 @@ function RBSMinimapButton:OnClick(button)
 			end
 		end
 	elseif button == 'RightButton' then
-		InterfaceOptionsFrame_OpenToFrame(RaidBuffStatus.optFrame)
+		InterfaceOptionsFrame_OpenToCategory(RaidBuffStatus.name)
 	end
 end
 
