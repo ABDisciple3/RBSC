@@ -44,7 +44,7 @@ function RBSMinimapButton:OnClick(button)
 			end
 		end
 	elseif button == 'RightButton' then
-		InterfaceOptionsFrame_OpenToFrame(RaidBuffStatus.optFrame)
+		InterfaceOptionsFrame_OpenToCategory(RaidBuffStatus.name)
 	end
 end
 
